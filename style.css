@@ -1,0 +1,109 @@
+/* Cài đặt chung */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Hộp chứa quiz chính */
+#quiz-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước */
+}
+
+/* Tiêu đề câu hỏi */
+#question {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  color: #004a99;
+}
+
+/* Thanh tiến độ */
+#progress {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Các nút lựa chọn câu trả lời */
+.option {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #e6f0ff;
+  border: 1px solid #b3d1ff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: left;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.option:hover:not(:disabled) {
+  background-color: #d1e3ff;
+  border-color: #80b3ff;
+}
+
+/* Khi nút bị vô hiệu hóa (sau khi chọn) */
+.option:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Kiểu cho đáp án ĐÚNG */
+.option.correct {
+  background-color: #d4edda; /* Xanh lá */
+  border-color: #c3e6cb;
+  color: #155724;
+  font-weight: bold;
+}
+
+/* Kiểu cho đáp án SAI */
+.option.wrong {
+  background-color: #f8d7da; /* Đỏ */
+  border-color: #f5c6cb;
+  color: #721c24;
+  font-weight: bold;
+}
+
+/* Thông báo phản hồi */
+#feedback {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  min-height: 1.5em; /* Giữ không gian cho phản hồi */
+}
+
+/* Nút "Câu tiếp theo" và "Làm lại" */
+#next-btn,
+#restart-btn {
+  display: block;
+  width: auto;
+  padding: 12px 25px;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+#next-btn:hover,
+#restart-btn:hover {
+  background-color: #0056b3;
+}
